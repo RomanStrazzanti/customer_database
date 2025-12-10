@@ -16,7 +16,7 @@ def customer_without_table():
     yield customer  # Un yield évite de sortir de la fonction
     customer.con.close()  # Après le test, le teardown
 
-
+ 
 @pytest.fixture(scope="function")
 def customer_with_table(customer_without_table):
     """
